@@ -312,11 +312,11 @@ footer {
 
     .wrapper2 {
         grid-template-areas:
-            "high-column"
-            "left-column"
-            "midle-column"
-            "right-column";
-        grid-template-columns: 1fr;
+            "high-column high-column high-column"
+            "left-column left-column left-column"
+            "midle-column midle-column midle-column"
+            "right-column right-column right-column";
+            grid-template-columns: 1fr 1fr 1fr;
     }
 
     .profile-photo {
