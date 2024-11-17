@@ -1,0 +1,284 @@
+/* ------------------------------
+   Réinitialisation et styles de base
+------------------------------ */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* ------------------------------
+   En-tête
+------------------------------ */
+header {
+    background-color: #09616e;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+/* ------------------------------
+   Barre de navigation
+------------------------------ */
+.navbar {
+    text-align: center;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    display: inline-block;
+}
+
+.navbar li {
+    display: inline;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar a::after {
+    content: "";
+    display: block;
+    height: 2px;
+    background: white;
+    width: 0;
+    transition: width 0.3s ease;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+}
+
+.navbar a:hover {
+    color: white;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+.img-nav {
+    width: 8%;
+    height: auto;
+    float: left;
+}
+
+/* ------------------------------
+   Mise en page (Grille)
+------------------------------ */
+.wrapper, .wrapper2 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    gap: 20px;
+}
+
+.wrapper {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "left-column right-column"
+        "down-column right-column";
+}
+
+.wrapper2 {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    grid-template-areas:
+        "high-column high-column high-column"
+        "left-column midle-column right-column";
+}
+
+/* Zones de la grille */
+.left-column { grid-area: left-column; }
+.right-column { grid-area: right-column; }
+.high-column { grid-area: high-column; }
+.midle-column { grid-area: midle-column; }
+.down-column { grid-area: down-column; }
+
+/* ------------------------------
+   Colonne gauche (Mini CV)
+------------------------------ */
+.cv-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.profile-photo {
+    width: 40%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.cv-box ul {
+    padding-left: 20px;
+}
+
+/* ------------------------------
+   Colonne droite (À propos)
+------------------------------ */
+.ap-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.right-column h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.right-column p {
+    line-height: 1.6;
+}
+
+.img-ap {
+    width: 70%;
+    height: auto;
+    border-radius: 5%;
+}
+
+/* ------------------------------
+   Bas de page (Réseaux sociaux)
+------------------------------ */
+.re-box {
+    background-color: #fff;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.down-column h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.down-column p {
+    line-height: 1.6;
+}
+
+.social-media {
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.social-media ul {
+    list-style-type: none;
+}
+
+.social-media li {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.social-logo {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.social-media a {
+    text-decoration: none;
+    color: #0073e6;
+}
+
+.social-media a:hover {
+    text-decoration: underline;
+}
+
+/* ------------------------------
+   Page de contact
+------------------------------ */
+.contact-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact-form {
+    max-width: 600px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.contact-form h2 {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #09616e;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #075256;
+}
+
+
+/* ------------------------------
+   Centres d'intérêts
+------------------------------ */
+.ce-box, .pp-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.ce-photo {
+    width: 70%;
+    border-radius: 5%;
+    margin-bottom: 5px;
+}
+
+/* ------------------------------
+   Pied de page
+------------------------------ */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 8px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
