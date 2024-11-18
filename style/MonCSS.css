@@ -79,9 +79,9 @@ header {
 
 .wrapper, .wrapper2 {
     max-width: 1200px; /* Réglage de la taille */
-    margin: 0px ; /* Espace exterieur */
     padding: 20px; /* Ecart entre box et bordure */
     display: grid; /* Mise en place de la grille */
+    margin: 0 auto;
 }
 
 .wrapper { /* Pages : index ; projet */ 
