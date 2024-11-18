@@ -13,43 +13,37 @@ body {
     color: #333;
 }
 
-/* ------------------------------
-   En-tête
------------------------------- */
+
+
+/* En-tête */
+
 header {
-    background-color: #09616e;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
+    background-color: #09616e; /* Couleur de fond */
+    padding: 10px 0; /* largeur de l'en-tête*/
+    text-align: center; /* Alignement du texte au centre */
 }
 
-header h1 {
-    margin-bottom: 10px;
-}
 
-/* ------------------------------
-   Barre de navigation
------------------------------- */
+
+/* Barre de navigation */
+
 .navbar {
-    text-align: center;
+    text-align: center; /* Alignement du texte au centre */
 }
 
 .navbar ul {
-    list-style: none;
-    padding: 0;
-    display: inline-block;
+    list-style: none; /* Supprime les puces */
+    display: inline-block; /* Comportement inline */
 }
 
 .navbar li {
-    display: inline;
-    margin: 0 20px;
-    position: relative;
+    display: inline; /* Alignement du texte au centre */
+    margin: 20px; /* Alignement du texte au centre */
 }
 
 .navbar a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2em;
+    color: white; /* Couleur du texte */
+    text-decoration: none; /* Supprime le soulignage */
     position: relative;
     transition: color 0.3s ease;
 }
@@ -75,161 +69,149 @@ header h1 {
 }
 
 .img-nav {
-    width: 8%;
-    height: auto;
-    float: left;
+    width: 8%; /* Taille de l'image (Logo Univ) */
+    float: left; /* Image à gauche de la page */
 }
 
-/* ------------------------------
-   Mise en page (Grille)
------------------------------- */
+
+
+/* Mise en page (Grille) */
+
 .wrapper, .wrapper2 {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    display: grid;
-    gap: 20px;
+    max-width: 1200px; /* Réglage de la taille */
+    margin: 0px ; /* Espace exterieur */
+    padding: 20px; /* Ecart entre box et bordure */
+    display: grid; /* Mise en place de la grille */
 }
 
-.wrapper {
-    grid-template-columns: 1fr;
-    grid-template-areas:
+.wrapper { /* Pages : index ; projet */ 
+    grid-template-columns: 1fr; /* Structure des colonnes */ 
+    grid-template-areas: /* Agencement des grid */
         "left-column right-column"
         "down-column right-column";
+        gap: 20px; /* Ecart entre chaque box */
 }
 
-.wrapper2 {
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
+.wrapper2 { /* Pages : centres_interet */ 
+    grid-template-columns: 1fr 1fr 1fr; /* Structure des colonnes */ 
+    gap: 10px; /* Ecart entre chaque box */
     grid-template-areas:
         "high-column high-column high-column"
         "left-column midle-column right-column";
 }
 
-/* Zones de la grille */
-.left-column { grid-area: left-column; }
+/* Attribution des noms pour chaque grille */
+.left-column { grid-area: left-column; } 
 .right-column { grid-area: right-column; }
 .high-column { grid-area: high-column; }
 .midle-column { grid-area: midle-column; }
 .down-column { grid-area: down-column; }
 
-/* ------------------------------
-   Colonne gauche (Mini CV)
------------------------------- */
-.cv-box {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
+
+/* Colonne gauche (pour mini cv) */
+
+.cv-box { /* Bloc mini cv */
+    background-color: #fff; /* Fond en blanc pour le bloc */
+    padding: 20px; /* Espace entre les autres éléments  */
+    border-radius: 8px; /* Arrondi sur le bloc */
 }
 
-.profile-photo {
-    width: 40%;
-    height: auto;
-    border-radius: 50%;
-    margin-bottom: 20px;
+.profile-photo { /* Photo de profil */
+    width: 40%; /* Taille à 40% */
+    border-radius: 50%; /* Arrondi de la photo à 50% */
+    margin-bottom: 20px; /* Créer un espace avec le texte du dessous */
 }
 
-.cv-box ul {
-    padding-left: 20px;
+.cv-box ul { /* Liste Diplome / Experience */
+    padding-left: 20px; /* Créer une marge entre la liste est le bord du bloc */
 }
 
-/* ------------------------------
-   Colonne droite (À propos)
------------------------------- */
+/* Colonne droite (À propos) */
 .ap-box {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
+    background-color: #fff; /* Couleur de fond en blanc */
+    padding: 20px; /* Créer une marge entre la liste est le bord du bloc */
+    border-radius: 8px; /* Arrondi du bloc de 8px */
 }
 
-.right-column h2 {
-    margin-bottom: 10px;
-    color: #333;
+.right-column h2 { /* Pour le titre du bloc */
+    margin-bottom: 10px; /* Créer un espace en dessous du texte */
+    color: #333; /* Couleur du texte en gris */
 }
 
-.right-column p {
-    line-height: 1.6;
+.right-column p { /* Pour le paragraphe du bloc */
+    line-height: 1.6; /* Créer un espace entre chaque ligne du paragraphe */
 }
 
-.img-ap {
-    width: 70%;
-    height: auto;
-    border-radius: 5%;
+.img-ap { /* Pour l'image du bloc (IUT Blois) */
+    width: 70%; /* Taille de l'image à 70%*/
+    border-radius: 5%; /* Bord de l'image à 5% */
 }
 
-/* ------------------------------
-   Bas de page (Réseaux sociaux)
------------------------------- */
-.re-box {
-    background-color: #fff;
-    padding: 8px;
-    border-radius: 8px;
+/* Bas de page (Réseaux sociaux) */
+
+.re-box { /* Bloc réseaux */
+    background-color: #fff; /* Couleur de fond en blanc */
+    padding: 8px; /* Marge intérieur à 8px */
+    border-radius: 8px; /* Bordure du bloc à 8px */
 }
 
-.down-column h2 {
-    margin-bottom: 10px;
-    color: #333;
+.down-column h2 { /* colone down, Titre */
+    margin-bottom: 10px; /* Créer un espace avec le texte du dessous */
+    color: #333; /* Couleur en gris pour le texte */
 }
 
-.down-column p {
-    line-height: 1.6;
+.down-column p { /* colone down, paragraphe */
+    line-height: 1.6; /* Créer un espace entre chaque ligne du paragraphe */
 }
 
-.social-media {
-    padding: 20px;
-    border-radius: 8px;
-}
-
-.social-media ul {
-    list-style-type: none;
+.social-media { /* colone down ( que pour les réseaux), paragraphe */
+    padding: 20px; /* Marge intérieur à 20px */
+    border-radius: 8px; /* Bordure de 8px */
 }
 
 .social-media li {
-    margin: 5px 0;
-    display: flex;
-    align-items: center;
+    margin: 5px; /* Ajoute 5px d'espace à l'exterieur */
+    display: flex; /* Element flexible, facilite la disposition */
+    align-items: center; /* Aligne les élements */
 }
 
-.social-logo {
-    width: 24px;
+.social-logo { /* Logo dans bloc réseaux */
+    width: 24px; /* Taille */
     height: 24px;
-    margin-right: 10px;
+    margin-right: 10px; /* Ecart entre les logos et le texte de droite */
 }
 
-.social-media a {
+.social-media a { /* Clique */
     text-decoration: none;
     color: #0073e6;
 }
 
-.social-media a:hover {
-    text-decoration: underline;
+.social-media a:hover { /* Survol */
+    text-decoration: underline; /* Sous-lignage */
 }
 
-/* ------------------------------
-   Page de contact
------------------------------- */
+/* Page de contact */
 .contact-layout {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: flex; /* Permet de centrer le form, flexbox */
+    flex-direction: column; /* Organisation verticale */
+    align-items: center; /* Aligne les elt au centre */
     gap: 20px;
 }
 
 .contact-form {
-    max-width: 600px;
-    background-color: #fff;
-    padding: 20px;
+    max-width: 800px; /* Taille de la fenêtre de form */
+    background-color: #fff; /* Fond en blanc */
+    padding: 20px; /* Ecart exterieur avec les autres elt */
     border-radius: 8px;
 }
 
 .contact-form h2 {
     margin-bottom: 15px;
-    font-size: 1.5em;
+    font-size: 25px;
     text-align: center;
 }
-
-.contact-form input, 
-.contact-form textarea {
+.contact-form input, /* Reste */
+.contact-form textarea { /*Zone de message */
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -238,56 +220,46 @@ header h1 {
     font-size: 1em;
 }
 
-.contact-form button {
+.contact-form button { /* Bouton envoyer */
     width: 100%;
     padding: 10px;
     background-color: #09616e;
     color: #fff;
-    border: none;
     border-radius: 4px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
-.contact-form button:hover {
+.contact-form button:hover { /* Survol de la souris sur le bouton */
     background-color: #075256;
 }
 
 
-/* ------------------------------
-   Centres d'intérêts
------------------------------- */
-.ce-box, .pp-box {
+/* Centres d'intérêts */
+
+.ce-box, .pp-box { /* Bloc pour la page centre_interet */
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
 }
 
-.ce-photo {
+.ce-photo { /* Pour les photos de la page des centres d'interet */
     width: 70%;
     border-radius: 5%;
     margin-bottom: 5px;
 }
 
-/* ------------------------------
-   Pied de page
------------------------------- */
+/* Pied de page */
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 8px 0;
-    position: fixed;
-    bottom: 0;
+    position: fixed; /* Positionne le footer de manière fixe en bas de l'écran */
+    bottom: 0; /* Pour que le footer soit toujours en bas de la fenêtre */
     width: 100%;
 }
 
-/* ------------------------------
-   Responsive Design
------------------------------- */
+/* Responsive Design */
 
-/* Petits appareils (smartphones, largeur max de 600px) */
+/* Petits appareils (Téléphone) */
 @media (max-width: 600px) {
     body {
         font-size: 14px;
@@ -320,7 +292,7 @@ footer {
     }
 
     .profile-photo {
-        width: 60%; /* Réduit la taille pour un meilleur ajustement */
+        width: 60%; /* Réduit la taille */
     }
 
     footer {
@@ -329,7 +301,7 @@ footer {
     }
 }
 
-/* Moyens appareils (tablettes, largeur max de 1024px) */
+/* Moyens appareils (tablettes) */
 @media (max-width: 1024px) {
     .wrapper {
         grid-template-areas:
@@ -355,7 +327,7 @@ footer {
     }
 }
 
-/* Grands appareils (écrans larges) */
+/* Grands appareils (PC) */
 @media (min-width: 1025px) {
     body {
         font-size: 16px; /* Police normale pour les grands écrans */
